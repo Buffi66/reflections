@@ -10,13 +10,20 @@ What do you think are the pros and cons of manually choosing when to create a co
 Pro: You can write a comment for changes
      You don't have too many entrie in the history
 	 You can summarize changes which belong logically to another
+	 
+	 By committing manually instead of automaticall, you can decide what to commit and when.
+     This gives the opportunity to split the commits based on functionality.
+     By committing manually you can specify commit messages describing what has changed, instead of only showing an auto commit.
 
 Con: You can loose some changes in case of computer crash
 
+     Multi-file commits are useful when files are related to each other.
+     "Normal" documents seldom have relations so those are not needed. In sourcecode files will have lots of relations.
+     So having multi-file commits is an essential feature.
 
 Why do you think some version control systems, like Git, allow saving multiple files in one commit, while others, like Google Docs, treat each file separately?
 
-Git is used for source files and there it can be that some source belonges together. Therefore it is good to commit them all at once to have the possibility to check them out with one label.
+Git is used for source files and there it can be that some source belongs together. Therefore it is good to commit them all at once to have the possibility to check them out with one label.
 Google Docs is used mainly for Wordfiles or something similar. There is only one file concerned.
 
 
@@ -29,3 +36,14 @@ With "git diff id1 id2" you can see the differences in all files changed between
 How might using version control make you more confident to make changes that could break something?
 
 Because you can easily revert to an older, working version of your project.
+
+
+
+Commands:
+q | exit git log!
+git log | List the commits and show which files have changed
+git log --stat | Show addition information about the commits
+git diff id1 id2 | Compare two commits
+git clone | Create a local copy/clone from the repository
+git config --global color.ui auto | get colored diff output
+git checkout | Shows a previous version of the file. This is not a checkout to edit like in SVN or TFS!
