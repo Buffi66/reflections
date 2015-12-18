@@ -1,46 +1,47 @@
 What happens when you initialize a repository? Why do you need to do it?
 
-A .git directory will be created with some information in it but no commit will be done.
-To set the information that the directory is now a git repository.
+    A .git directory will be created with some information in it but no commit will be done.
+    To set the information that the directory is now a git repository.
 
 
 How is the staging area different from the working directory and the repository? What value do you think it offers?
 
-Staging area is a level between working directory and repository. It is useful to enable the possibility to commit only some files at a time from working area to repository.
+    Staging area is a level between working directory and repository. It is useful to enable the possibility to commit only some files at a time from working area to repository.
 
 
 How can you use the staging area to make sure you have one commit per logical change?
 
-First I can add files to the stage area and then I can see with "git diff lastCommit" what are the changes between stage area and repository to see whether all files belong to one logical change before "git commit".
+    First I can add files to the stage area and then I can see with "git diff lastCommit" what are the changes between stage area and repository to see whether all files belong to one logical change before "git commit".
 
 
 What are some situations when branches would be helpful in keeping your history organized? How would branches help?
 
-Branches are helpful if you want to to do some experimental changes/ branch to a new version or some specific changes like Italian support
+    Branches are helpful if you want to to do some experimental changes/ branch to a new version or some specific changes like Italian support
 
 
 How do the diagrams help you visualize the branch structure? (git log --graph --oneline branch1 branch2)
 
-I can see easily what changes were done in which branch and where the branch was split up fom master or any commit id. 
-(At first set git head (means pointer) with "git checkout git_id")
-(Then use "git checkout -b new_branch_name")
+    I can see easily what changes were done in which branch and where the branch was split up fom master or any commit id. 
+    (At first set git head (means pointer) with "git checkout git_id")
+    (Then use "git checkout -b new_branch_name")
 
 
 How to merge branches on the command line:
-1. Set branch to master
-2. git merge master branch1
+
+    1. Set branch to master
+    2. git merge master branch1
 
 
 What is the result of merging two branches together? Why do we represent it in the diagram the way we do?
 
-The changes of both branches are merged together so that they can be seen in one branch.
-Change can be easily tracked if they are shown in a graph.
+    The changes of both branches are merged together so that they can be seen in one branch.
+    Change can be easily tracked if they are shown in a graph.
 
 
 What are the pros and cons of Git’s automatic merging vs. always doing merges manually?
 
-Pros: You don't have to check all changes manually which would take a long time in case of big changes.
-Cons: It could be that something goes wrong during merge.
+    Pros: You don't have to check all changes manually which would take a long time in case of big changes.
+    Cons: It could be that something goes wrong during merge.
 
 
 
