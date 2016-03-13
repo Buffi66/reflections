@@ -7,7 +7,21 @@ Why might you want to always pull changes manually rather than having Git automa
 
     - It's better if I have some changes only locally and commit them to remote repository for other people only in case all tests are successful and I'm pretty sure that no files with errors are sent to other people.
     - I also want to pull only if one featuer or bugfix is completed or if I can't work any longer on it.
+	
+
+What is the benefit of having a copy of the last known state of the remote stored locally?
+
+	In case you make any changes during other people also do some changes it is the easiest way to merge changes. Otherwise you may have too many merge conflicts.
     
+origin/master is that version on local machine after last pull, resp. push
+
+git fetch origin (now changes from remote are in origin/master locally) (now you can use git log and git diff to see changes)
+git status to see changes
+git merge will show the files merged automatically
+After correcting the merged files, save them
+git add file
+git commit (message in the file will be automatically added)
+git push origin master
     
 Commands:
 git remote | Show all remote locations for the repository
@@ -16,4 +30,4 @@ git remove -v | Outputs the remote locations with verbose information (fetch and
 git push origin master | Push the master branch to the remote location origin.
 git pull origin master | Get the master branch from the remote location origin.
 git pull origin master | = Git fetch origin + git merge master origin/master
-git fetch origin | Get the changes from the remote location into the (hidden?) origin/master branch
+git fetch origin | Get the changes from the remote location into the origin/master branch
